@@ -15,6 +15,7 @@
 from collections import OrderedDict
 from mktxp.cli.config.config import CollectorKeys
 from mktxp.collector.dhcp_collector import DHCPCollector
+from mktxp.collector.hotspot_collector import HotspotCollector
 from mktxp.collector.package_collector import PackageCollector
 from mktxp.collector.connection_collector import IPConnectionCollector
 from mktxp.collector.interface_collector import InterfaceCollector
@@ -55,6 +56,7 @@ class CollectorRegistry:
 
         self.register(CollectorKeys.PACKAGE_COLLECTOR, PackageCollector.collect)
         self.register(CollectorKeys.DHCP_COLLECTOR, DHCPCollector.collect)
+        self.register(CollectorKeys.HOTSPOT_COLLECTOR, HotspotCollector.collect)
         self.register(CollectorKeys.IP_CONNECTION_COLLECTOR, IPConnectionCollector.collect)
         self.register(CollectorKeys.POOL_COLLECTOR, PoolCollector.collect)
         self.register(CollectorKeys.INTERFACE_COLLECTOR, InterfaceCollector.collect)

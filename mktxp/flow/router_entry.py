@@ -50,7 +50,8 @@ class RouterEntry:
                             CollectorKeys.QUEUE_TREE_COLLECTOR: 0,
                             CollectorKeys.QUEUE_SIMPLE_COLLECTOR: 0,                            
                             CollectorKeys.USER_COLLECTOR: 0,                            
-                            CollectorKeys.MKTXP_COLLECTOR: 0
+                            CollectorKeys.MKTXP_COLLECTOR: 0,
+                            CollectorKeys.HOTSPOT_COLLECTOR: 0
                             }         
         self._dhcp_entry = None
         self._dhcp_records = {}

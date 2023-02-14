@@ -32,6 +32,7 @@ class CollectorKeys:
     IPV6_NEIGHBOR_COLLECTOR = 'IPv6NeighborCollector'
     PACKAGE_COLLECTOR = 'PackageCollector'
     DHCP_COLLECTOR = 'DHCPCollector'
+    HOTSPOT_COLLECTOR = 'HotspotCollector'
     POOL_COLLECTOR = 'PoolCollector'
     IP_CONNECTION_COLLECTOR = 'IPConnectionCollector'
     INTERFACE_COLLECTOR = 'InterfaceCollector'
@@ -66,6 +67,7 @@ class MKTXPConfigKeys:
     FE_DHCP_KEY = 'dhcp'
     FE_DHCP_LEASE_KEY = 'dhcp_lease'
     FE_DHCP_POOL_KEY = 'pool'
+    FE_HOTSPOT_KEY = 'hotspot'
     FE_IP_CONNECTIONS_KEY = 'connections'
     FE_CONNECTION_STATS_KEY = 'connection_stats'
     FE_INTERFACE_KEY = 'interface'
@@ -134,7 +136,7 @@ class MKTXPConfigKeys:
     BOOLEAN_KEYS_YES = {FE_DHCP_KEY, FE_PACKAGE_KEY, FE_DHCP_LEASE_KEY, FE_DHCP_POOL_KEY, FE_IP_CONNECTIONS_KEY, FE_INTERFACE_KEY, FE_FIREWALL_KEY,
                         FE_MONITOR_KEY, FE_ROUTE_KEY, MKTXP_USE_COMMENTS_OVER_NAMES,
                         FE_WIRELESS_KEY, FE_WIRELESS_CLIENTS_KEY, FE_CAPSMAN_KEY, FE_CAPSMAN_CLIENTS_KEY, FE_POE_KEY,
-                        FE_NETWATCH_KEY, FE_PUBLIC_IP_KEY, FE_USER_KEY, FE_QUEUE_KEY}
+                        FE_NETWATCH_KEY, FE_PUBLIC_IP_KEY, FE_USER_KEY, FE_QUEUE_KEY, FE_HOTSPOT_KEY}
 
     SYSTEM_BOOLEAN_KEYS_YES = {MKTXP_BANDWIDTH_KEY}
     SYSTEM_BOOLEAN_KEYS_NO = {MKTXP_VERBOSE_MODE, MKTXP_FETCH_IN_PARALLEL}
@@ -157,7 +159,8 @@ class ConfigEntry:
                                                        MKTXPConfigKeys.FE_FIREWALL_KEY, MKTXPConfigKeys.FE_MONITOR_KEY, MKTXPConfigKeys.FE_ROUTE_KEY, MKTXPConfigKeys.FE_WIRELESS_KEY, MKTXPConfigKeys.FE_WIRELESS_CLIENTS_KEY,
                                                        MKTXPConfigKeys.FE_IP_CONNECTIONS_KEY, MKTXPConfigKeys.FE_CONNECTION_STATS_KEY, MKTXPConfigKeys.FE_CAPSMAN_KEY, MKTXPConfigKeys.FE_CAPSMAN_CLIENTS_KEY, MKTXPConfigKeys.FE_POE_KEY, MKTXPConfigKeys.FE_NETWATCH_KEY,
                                                        MKTXPConfigKeys.MKTXP_USE_COMMENTS_OVER_NAMES, MKTXPConfigKeys.FE_PUBLIC_IP_KEY, MKTXPConfigKeys.FE_IPV6_FIREWALL_KEY, MKTXPConfigKeys.FE_IPV6_NEIGHBOR_KEY,
-                                                       MKTXPConfigKeys.FE_USER_KEY, MKTXPConfigKeys.FE_QUEUE_KEY, MKTXPConfigKeys.FE_REMOTE_DHCP_ENTRY
+                                                       MKTXPConfigKeys.FE_USER_KEY, MKTXPConfigKeys.FE_QUEUE_KEY, MKTXPConfigKeys.FE_REMOTE_DHCP_ENTRY,
+                                                       MKTXPConfigKeys.FE_HOTSPOT_KEY
                                                        ])
     MKTXPSystemEntry = namedtuple('MKTXPSystemEntry', [MKTXPConfigKeys.PORT_KEY, MKTXPConfigKeys.MKTXP_SOCKET_TIMEOUT,
                                                        MKTXPConfigKeys.MKTXP_INITIAL_DELAY, MKTXPConfigKeys.MKTXP_MAX_DELAY,

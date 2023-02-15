@@ -55,6 +55,6 @@ if __name__ == '__main__':
         use_ssl=False,
         ssl_verify=False)
 
-    hosts = connection.get_api().get_resource('/ip/hotspot/host').get()
+    hosts = connection.get_api().get_resource('/ip/pool').get()
 
     print(hosts)

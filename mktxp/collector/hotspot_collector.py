@@ -9,7 +9,6 @@ class HotspotCollector(BaseCollector):
 
     @staticmethod
     def collect(router_entry):
-        print('collecting hotspot')
         if not router_entry.config_entry.dhcp:
             return
 
